@@ -1,7 +1,6 @@
 class Genre < ActiveRecord::Base
   has_many :songs
   has_many :artists, through: :songs
-
   def song_count
     self.songs.count
   end
@@ -15,5 +14,4 @@ class Genre < ActiveRecord::Base
       artist.name
     end
   end
-  
 end
